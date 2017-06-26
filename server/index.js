@@ -5,6 +5,7 @@ const path = require('path');
 const app = express();
 
 //Store compiled version of our website
+//A folder that express is always serving up
 app.use(express.static(path.join(__dirname, '../client/public')));
 
 app.use('/*', (req, res)=> {
